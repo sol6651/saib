@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>[SAIB] 세이브앤코</title>
+
+    <style>
+        body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p, select, table, th, td, tr, textarea, button, form {margin: 0; padding: 0;}
+    </style>
+
+    <style>
+        /*헤더 레이아웃 */
+        #header {width: 100%; height: 50px; background: #ffffff; position:fixed;}
+
+        /* 컨텐츠 레이아웃*/
+        #contents {width: 100%; height: 850px; background: #ffffff;}
+
+        #contents1 {width: 100%; height: 850px; background-image: linear-gradient(to top, #fff1fbea 10%, white 40%);}
+
+        #contents2 {width: 100%; height: 1500px; background: #ffffff;}
+
+        #contents3 {width: 100%; height: 900px; background: #fce8ec;}
+
+        #contents4 {width: 100%; height: 250px; background: #ffffff;}
+
+        #contents5 {width: 100%; height: 300px; background: #fce8ec;}
+
+        #contents6 {width: 100%; height: 900px; background: #ffffff;}
+      
+       /*하단 레이아웃*/
+        #footer {width: 100%; height:250px; background: #fce8ec;}
+
+
+
+      /*버튼*/
+        .jb {
+				      width: 160px;
+				      height: 40px;
+				      background-color:#e7acbd;
+				      transition: all ease 1s;
+			      }
+			  .jb:hover {
+				      transform: scale( 1.1 );
+		      	}
+
+        *{margin:0;padding:0;}
+    	  
+        ul,li{list-style:none;}
+
+      /*슬라이드1*/
+    	#slide{height:500px;position:relative;overflow:hidden;}
+    	#slide ul{width:400%;height:100%;transition:1s;}
+    	#slide ul:after{content:"";display:block;clear:both;}
+    	#slide li{float:left;width:25%;height:100%;}
+    	#slide li:nth-child(1){background:white;}
+    	#slide li:nth-child(2){background:white;}
+    	#slide li:nth-child(3){background:white;}
+    	#slide li:nth-child(4){background:white;}
+      #slide li:nth-child(5){background:white;}
+    	#slide input{display:none;}
+    	#slide label{display:inline-block;vertical-align:middle;width:10px;height:10px; border:2px solid #ffffff;background:rgb(224, 224, 224);transition:0.3s;border-radius:50%;cursor:pointer;}
+    	#slide .pos{text-align:center;position:absolute;bottom:10px;left:0;width:100%;text-align:center;}
+
+    	#pos1:checked~ul{margin-left:0%;}
+    	#pos2:checked~ul{margin-left:-100%;}
+    	#pos3:checked~ul{margin-left:-200%;}
+    	#pos4:checked~ul{margin-left:-300%;}
+      #pos5:checked~ul{margin-left:-400%;}
+
+    	#pos1:checked~.pos>label:nth-child(1){background:#e7acbd;}
+    	#pos2:checked~.pos>label:nth-child(2){background:#e7acbd;}
+    	#pos3:checked~.pos>label:nth-child(3){background:#e7acbd;}
+    	#pos4:checked~.pos>label:nth-child(4){background:#e7acbd;}
+      #pos5:checked~.pos>label:nth-child(5){background:#e7acbd;}
+
+        
+      /*슬라이드2*/
+    	#slide1{height:500px;position:relative;overflow:hidden;}
+    	#slide1 ul{width:400%;height:100%;transition:1s;}
+    	#slide1 ul:after{content:"";display:block;clear:both;}
+    	#slide1 li{float:left;width:25%;height:100%;}
+    	#slide1 li:nth-child(6){background:white;}
+    	#slide1 li:nth-child(7){background:white;}
+
+    	#slide1 input{display:none;}
+    	#slide1 label{display:inline-block;vertical-align:middle;width:10px;height:10px; border:2px solid #ffffff;background:rgb(224, 224, 224);transition:0.3s;border-radius:50%;cursor:pointer;}
+    	#slide1 .ppos{text-align:center;position:absolute;bottom:10px;left:0;width:100%;text-align:center;}
+
+    	#ppos6:checked~ul{margin-left:0%;}
+    	#ppos7:checked~ul{margin-left:-100%;}
+
+    	#ppos6:checked~.ppos>label:nth-child(6){background:#e7acbd;}
+    	#ppos7:checked~.ppos>label:nth-child(7){background:#e7acbd;}
+    
+      
+    </style>
+    
+
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+
+              <div style="width: 55%;  float: right;">
+                <img src="img/logo.PNG" style="width:130px; height:50px;">
+              </div>
+
+              
+
+              <div style="margin: 15px 250px; float: left;">
+                <h5>ABOT</h5>
+              </div>
+
+              <div style="margin: 15px -200px; float: left;">
+                <h5>SHOP</h5>
+              </div>
+
+              <div style="margin: 15px -110px; float: left;">
+                <h5>CAMPAIGN</h5>
+              </div>
+
+              <div style="margin: 15px 10px; float: left;">
+                <h5>SAIB-SAID</h5>
+              </div>
+
+              <div style="margin: 15px -220px; float: right;">
+                <h5>FAQ</h5>
+              </div>
+
+              <div style="margin: 15px -300px; float: right;">
+                <h5>LOGIN</h5>
+              </div>
+
+              <div style="margin: 15px -370px; float: right;">
+                <h5>CART</h5>
+              </div>
+
+              <div style="margin: 15px -460px; float: right;">
+                <h5>MYPAGE</h5>
+              </div>
+
+              <div style="margin: 15px -530px; float: right;">
+                <img src="img/earth-icon.PNG" style="width:20px; height:20px;">
+              </div>
+
+              <div style="margin: 15px -560px; float: right;">
+                <img src="img/insta-icon.PNG" style="width:20px; height:20px;">
+              </div>
+
+              <div style="margin: 14px -585px; float: right;">
+                <img src="img/facebook-icon.PNG" style="width:13px; height:22px;">
+              </div>
+            
+              
+            </div>
+            
+        </div>
+        <!-- header -->
+
+        <div id="contents">
+
+          <div style="margin-top:0px;">
+            <video src="img/player.mp4" width="100%" height="100%" autoplay controls loop></video>
+          </div>
+          
+        </div>
+        <!-- content -->
+
+        <div id="contents1">
+          <div style="margin: 100px 300px; float:left;">
+            <P style="font-size:35px; color:rgb(88, 88, 88); font-family: 'Noto Sans KR';">
+              OUR PRODUCTS
+            </P>
+          </div>
+          <div style="margin: -30px 300px; float: left;">
+            <img src="img/image1.PNG" style="width: 280px; height: 280px;">
+          </div>
+
+          <div style="margin: -254px 625px; float: left;">
+            <img src="img/image2.PNG" style="width: 285px; height: 280px;">
+          </div>
+
+          <div style="margin: -254px 950px; float: left;">
+            <img src="img/image3.PNG" style="width: 285px; height: 280px;">
+          </div>
+
+          <div style="margin: 50px 300px; float:left; font-family: '함초롬바탕 확장';">
+            <P style="font-size: 13px; color:gray;">
+              파우치에 휴대하기 좋은
+            </P>
+            <P style="font-size: 15px; color:black;">
+              세이브 프리미엄 콘돔 (3pcs)
+            </P>
+            <P style="font-size: 15px; color:#BE4B78;">
+              7,900원
+            </P>
+          </div>
+
+          <div style="margin: -108px 630px; float:left; font-family: '함초롬바탕 확장';">
+            <P style="font-size: 13px; color:gray;">
+              천연유래성분으로 순한
+            </P>
+            <P style="font-size: 15px; color:black;">
+              세이브 네츄럴 포밍 여성 청결제
+            </P>
+            <P style="font-size: 15px; color:#BE4B78;">
+              <span style="color: black;">29,500원</span> → 최대 25% 할인 중
+            </P>
+          </div>
+
+          <div style="margin: -108px 320px; float:right; font-family: '함초롬바탕 확장';">
+            <P style="font-size: 13px; color:gray;">
+              더 얇고 안전한 세이브 신제품
+            </P>
+            <P style="font-size: 15px; color:black;">
+              세이브 프리미엄 콘돔 리얼필 (6pcs)
+            </P>
+            <P style="font-size: 15px; color:#BE4B78;">
+              12,900원
+            </P>
+          </div>
+
+          <div style="margin: 50px 680px; float: left;">
+            <div class="jb">
+              <div style="margin: 10px 30px; float:left; font-family: '함초롬바탕 확장';">
+                <P style="font-size: 13px; color:white;">
+                  SHOP 바로가기
+                </P>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- contents1 -->
+
+      <div id="contents2">
+          <div style="margin: 100px 300px; float:left;">
+            <P style="font-size:35px; color:rgb(88, 88, 88); font-family: 'Noto Sans KR';">
+              OUR PROMISE
+            </P>
+          </div>
+
+
+        <div style="margin: 10px 100px; float: left;">
+
+          <div id="slide">
+            <input type="radio" name="pos" id="pos1" checked>
+            <input type="radio" name="pos" id="pos2">
+            <input type="radio" name="pos" id="pos3">
+            <input type="radio" name="pos" id="pos4">
+            <input type="radio" name="pos" id="pos5">
+
+            <ul>
+              <li><center><img src="img/one.PNG" width="800px"></img></center></li>
+              <li><center><img src="img/two.PNG" width="800px"></img></center></li>
+              <li><center><img src="img/three.PNG" width="800px"></img></center></li>
+              <li><center><img src="img/four.PNG" width="800px"></img></center></li>
+              <li><center><img src="img/five.PNG" width="800px"></img></center></li>
+            </ul>
+
+            <p class="pos">
+              <label for="pos1"></label>
+              <label for="pos2"></label>
+              <label for="pos3"></label>
+              <label for="pos4"></label>
+              <label for="pos5"></label>
+            </p>
+
+          </div>
+        </div>
+
+        <div style="margin: 200px 100px; float: left;">
+
+          <div id="slide1">
+            <input type="radio1" name="ppos" id="ppos6" checked>
+            <input type="radio1" name="ppos" id="ppos7">
+            
+
+            <ul>
+              <li><center><img src="img/review1.PNG" width="900px"></img></center></li>
+              <li><center><img src="img/review2.PNG" width="900px"></img></center></li>
+              
+            </ul>
+
+            <p class="ppos">
+              <label for="ppos6"></label>
+              <label for="ppos7"></label>
+              
+            </p>
+
+          </div>
+        </div>
+
+        
+  
+      </div>
+        <!-- contents2 -->
+
+        <div id="contents3">
+          <div style="margin: 30px 300px; float:left;">
+            <P style="font-size:35px; color:rgb(88, 88, 88); font-family: 'Noto Sans KR';">
+              CAMPAIGN →
+            </P>
+          </div>
+
+          <div style="margin: -30px 300px; float: left;">
+            <img src="img/image4.PNG" style="width: 600px; height: 400px;">
+          </div>
+
+          <div style="margin: -280px 280px; float:right; font-family: 'Georgia';">
+            <P style="font-size: 40px; color:#e7acbd;">
+              <b>female</b>
+            </P>
+            <P style="font-size: 40px; color:#e7acbd;">
+              <b>empowerment</b>
+            </P>
+          </div>
+
+          <div style="margin: -80px 355px; float:right; font-family: '함초롬바탕 확장';">
+            <P style="font-size: 15px; color:gray;">
+              세이브는 판매 수익의 10%를
+            </P>
+            <P style="font-size: 15px; color:gray;">
+              성 평등과 여성 권리 증진을 위한
+            </P>
+            <P style="font-size: 15px; color:gray;">
+              다양한 캠페인에 사용합니다.
+            </P>
+          </div>
+
+
+          
+        
+        </div>
+        <!-- contents3 -->
+
+        <div id="contents4">
+
+        
+          <div style="margin: 90px 450px; float: left;">
+
+          <table>
+            <tr style="vertical-align:top">
+              <td style="width:200px; border-right:1px solid #e7acbd; padding-right:12px; text-align:justify">
+                <P style="font-size:30px; color:gray; font-family: 'Noto Sans KR';">
+                 AWARDS → </P>
+                <P style="font-size:15px; color:#e7acbd; font-family: 'Noto Sans KR';">
+                 세이브앤코 수상내역 </P>
+              </td>
+
+              <td style="width:200px; border-right:1px solid #e7acbd; padding-right:12px; text-align:justify">
+                <P style="font-size:30px; color:gray; font-family: 'Noto Sans KR';">
+                 PRESS → </P>
+                <P style="font-size:15px; color:#e7acbd; font-family: 'Noto Sans KR';">
+                 세이브앤코 언론보도 </P>
+              </td>
+
+              <td style="width:200px; border-right:1px solid #e7acbd; padding-right:12px; text-align:justify">
+                <P style="font-size:30px; color:gray; font-family: 'Noto Sans KR';">
+                 STOCKIST → </P>
+                <P style="font-size:15px; color:#e7acbd; font-family: 'Noto Sans KR';">
+                 오프라인 판매처 </P>
+              </td>
+              
+            </tr>
+          </table>
+
+        </div>
+
+
+          
+        
+        </div>
+        <!-- contents4 -->
+
+        <div id="contents5">
+
+          <div style="margin: 15px 300px; float: left;">
+            <img src="img/award.PNG" style="width:900px; height:280px;">
+          </div>
+
+        </div>
+        <!-- contents5 -->
+
+
+        <div id="contents6">
+
+          <div style="margin: 50px 630px; float:left;">
+            <P style="font-size:25px; color:rgb(88, 88, 88); font-family: 'Noto Sans KR';">
+              instagram - @saibnco
+            </P>
+          </div>
+
+          <div style="margin: 15px 300px; float: right;">
+            <img src="img/instagram.PNG" style="width:900px; height:600px;">
+          </div>
+    
+        </div>
+        <!-- contents6 -->
+
+        <div id="footer">
+
+          <div style="margin: 65px 300px; float:left; font-family: '함초롬바탕 확장';">
+            <P style="font-size: 11px; color:#e7acbd;">
+              <span style="color:#BE4B78;">(주)세이브앤코|</span> 대표 박지원 | 사업자등록번호 165-87-00778 | 통신판매업 제 2018-서울강남-02911호
+            </P>
+
+            <P style="font-size: 11px; color:#BE4B78;">
+              hello@saibnco.com | TEL02-6204-1023 | 서울특별시 강남구 논현로158길 28, 2층
+            </P>
+
+            <P style="font-size: 11px; color:#BE4B78;">
+              Copyrightⓒ 세이브앤코All Rights Reserved
+            </P>
+          </div>
+
+          <div style="margin: 0px 300px; float:left; font-family: '함초롬바탕 확장';">
+            <P style="font-size: 11px; color:#e7acbd;">
+              이용약관 | 개인정보취급방침 | 가이드
+            </P>
+
+            <P style="font-size: 11px; color:#e7acbd;">
+              고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG사의 구매안전서비스를 이용하실 수 있습니다. | KG 이니시스 에스크로(서비스가입사실확인)
+            </P>
+          </div>
+
+          <div style="margin: -130px 300px; float: right;">
+            <img src="img/earth.PNG" style="width:40px; height:35px;">
+          </div>
+
+          <div style="margin: -130px 250px; float: right;">
+            <img src="img/insta.PNG" style="width:39px; height:37px;">
+          </div>
+
+          <div style="margin: -130px 195px; float: right;">
+            <img src="img/facebook.PNG" style="width: 40px; height:38px;">
+          </div>
+            
+        </div>
+        <!-- footer -->
+
+
+    </div>
+    <!-- wrap -->
+</body>
+</html>   
+
